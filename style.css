@@ -48,7 +48,7 @@ body {
   background-color: #ffffff;
 }
 
-/* Workshop overview */
+/* Workshop overview - Desktop layout */
 .overview-content {
   display: flex;
   align-items: center; /* vertically center text and image */
@@ -57,10 +57,22 @@ body {
 }
 
 .logo img {
-  width: 400px;
+  width: 450px;
   border-radius: 16px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
   height: auto;
+}
+
+/* Workshop overview - Mobile layout */
+@media (max-width: 768px) {
+  .overview-content {
+    flex-direction: column;  /* stack items vertically */
+    text-align: center;      /* center text for cleaner look */
+  }
+
+  .logo img {
+    max-width: 150px;        /* optional: smaller logo on mobile */
+  }
 }
 
 /* Organizing committee */
@@ -83,6 +95,38 @@ body {
   object-fit: cover;
   border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* Special Journal Section */
+.journal-content {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.journal-image img {
+  width: 220px;          /* controls visual size */
+  height: auto;          /* preserves original proportions */
+  object-fit: contain;   /* prevents distortion */
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.journal-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+@media (max-width: 768px) {
+  .journal-content {
+    flex-direction: column;   /* stack image + text vertically */
+    text-align: center;
+  }
+
+  .journal-image img {
+    width: 160px;            /* smaller size on mobile */
+  }
 }
 
 /* Typography */
