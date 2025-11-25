@@ -100,9 +100,9 @@ body {
 /* Special Journal Section */
 .journal-content {
   display: flex;
-  gap: 40px;
-  align-items: center;
-  flex-wrap: wrap;
+  align-items: center; /* vertically center text and image */
+  justify-content: space-between; /* space between text and image */
+  gap: 20px; /* optional spacing */
 }
 
 .journal-image img {
