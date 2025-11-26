@@ -1,3 +1,29 @@
+/* Top Navigation Menu, remains visible while scrolling with sticky position */
+.top-menu {
+  width: 100%;
+  background: linear-gradient(135deg, var(--blue-main), var(--blue-accent));
+  padding: 14px 0;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  position: sticky;  
+  top: 0;
+  z-index: 1000;
+}
+
+.top-menu a {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.05em;
+  letter-spacing: 0.5px;
+  transition: opacity 0.2s ease;
+}
+
+.top-menu a:hover {
+  opacity: 0.75;
+}
+
 :root {
   --blue-main: #1f4e79;
   --blue-accent: #4a90d9;
