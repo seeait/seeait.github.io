@@ -71,7 +71,7 @@ body {
   }
 
   .logo img {
-    max-width: 150px;        /* optional: smaller logo on mobile */
+    max-width: 250px;        /* optional: smaller logo on mobile */
   }
 }
 
@@ -125,7 +125,7 @@ body {
   }
 
   .journal-image img {
-    width: 160px;            /* smaller size on mobile */
+    width: 180px;            /* smaller size on mobile */
   }
 }
 
