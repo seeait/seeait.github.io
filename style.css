@@ -99,6 +99,14 @@ body {
   .logo img {
     max-width: 250px;        /* optional: smaller logo on mobile */
   }
+
+  .supporters-logos {
+    gap: 25px;
+  }
+  .supporters-logos img {
+    max-width: 130px;
+  }
+
 }
 
 /* Organizing committee */
@@ -174,6 +182,32 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+/* Supporters Section */
+.supporters-logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+  align-items: center;
+  justify-items: center;
+}
+
+.supporters-logos img {
+  width: 100%;
+  max-width: 130px;  /* smaller logos */
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.85;
+  transition: all 0.3s ease;
+}
+
+.supporters-logos img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
 }
 
 /* Footer */
