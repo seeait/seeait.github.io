@@ -197,7 +197,7 @@ a:hover {
 .supporters-logos img {
   width: 100%;
   max-width: 130px;  /* smaller logos */
-  height: auto;
+  max-height: 85px;
   object-fit: contain;
   filter: grayscale(100%);
   opacity: 0.85;
