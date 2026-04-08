@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Program – SEE-AIT 2026 (Co-located with FSE'26)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Menu bar -->
+<nav class="top-menu">
+  <a href="index.html">Home</a>
+  <a href="organization.html">Organization</a>
+  <a href="program.html">Program</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<header class="top-header">
+  <h1>SEE-AIT 2026</h1>
+  <p>The 1st International Workshop on Software Engineering for the GenAI Transformation</p>
+  <p><strong>Co-located with FSE 2026 – Montreal, Canada</strong></p>
+  <p><strong>Half-day Workshop • July 5, 2026</strong></p>
+</header>
+
+<!-- Keynote Section -->
+<section class="section">
+  <div class="section-inner">
+    <h2>Keynote Session</h2>
+
+    <h3>
+      Architects of Culture: Bridging Software Engineering and HR in the GenAI Era
+    </h3>
+
+    <p>
+      by 
+      <a href="https://www.linkedin.com/in/magnus-lundbäck-2239973a/" target="_blank">Dr. Magnus Lundbäck</a> 
+      and 
+      <a href="https://www.linkedin.com/in/lucasgren/" target="_blank">Dr. Lucas Gren</a>
+    </p>
+
+    <p>
+      <a href="#" class="toggle-abstract">Show abstract</a>
+    </p>
+
+    <div class="abstract-content" style="display: none;">
+      <p>
+        GenAI adoption is moving fast—but culture often isn’t. This keynote discusses why AI transformation is today much more a people and change challenge than it is a technical one. Drawing from real-world case studies, this session will cover:
+        i) how engineers and HR leaders can partner in the GenAI era,
+        ii) why AI adoption should be treated as a sustainable change management process, and
+        iii) how HR processes are evolving to support individuals and teams through this deep organizational change.
+      </p>
+
+      <p>
+        <b>Dr. Magnus Lundbäck</b> is the Executive Vice President of Human Resources @ Getinge, leading AI transformation efforts.
+      </p>
+
+      <p>
+        <b>Dr. Lucas Gren</b> is the Director of HR Process Automation and AI @ Getinge, and an active researcher at the Department of Computer Science and Engineering @ Chalmers | University of Gothenburg.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Accepted Papers -->
+<section class="section gray">
+  <div class="section-inner">
+    <h2>Accepted Papers</h2>
+
+    <p>More details will be added.</p>
+
+    <!-- <ul>
+      <li><b>Paper Title 1</b><br>Authors – Affiliation</li><br>
+      <li><b>Paper Title 2</b><br>Authors – Affiliation</li><br>
+      <li><b>Paper Title 3</b><br>Authors – Affiliation</li>
+    </ul> -->
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>© The 1st International Workshop on Software Engineering for the GenAI Transformation (SEE-AIT). All rights reserved.</p>
+  <p>© Created by <a href="https://vbn.aau.dk/en/persons/thta/">Theocharis Tavantzis</a>, Ph.D. Candidate at Aalborg University.</p>
+</footer>
+
+<!-- Abstract button functionality -->
+<script>
+  const toggle = document.querySelector(".toggle-abstract");
+  const content = document.querySelector(".abstract-content");
+
+  toggle.addEventListener("click", function(e) {
+    e.preventDefault();
+
+    if (content.style.display === "none") {
+      content.style.display = "block";
+      toggle.textContent = "Hide abstract";
+    } else {
+      content.style.display = "none";
+      toggle.textContent = "Show abstract";
+    }
+  });
+</script>
+
+</body>
+</html>
