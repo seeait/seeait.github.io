@@ -65,6 +65,15 @@ body {
   padding: 0 20px;
 }
 
+.section-inner h3 {
+  margin-top: 30px;
+}
+
+.section-inner h3:not(:first-child) {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 20px;
+}
+
 /* Light blue full-width background */
 .gray {
   background-color: var(--blue-soft);
@@ -91,6 +100,23 @@ body {
 
 /* Workshop overview - Mobile layout */
 @media (max-width: 768px) {
+
+  .top-menu {
+    gap: 15px;
+  }
+
+  .top-menu a {
+    font-size: 0.9em;
+  }
+
+  .top-header {
+    padding: 50px 15px;
+  }
+
+  .top-header h1 {
+    font-size: 2em;
+  }
+
   .overview-content {
     flex-direction: column;  /* stack items vertically */
     text-align: center;      /* center text for cleaner look */
