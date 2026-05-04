@@ -129,13 +129,15 @@
 </div>
 
 <h3>
-  AI Safety Debt and Its Downstream Burden on Software Developers
+  LLM-based Specification-Driven Test Oracle Enhancement
 </h3>
 
 <p>
-  Raymond Douglas (Alignment of Complex Systems Research Group),<br> 
-  <a href="https://scholar.google.com/citations?hl=el&user=XKMzgFcAAAAJ" target="_blank">Peter Wallich</a> (Constellation Institute),<br> 
-  <a href="https://scholar.google.com/citations?hl=el&user=DGV8OuYAAAAJ" target="_blank">Gabriel Konar-Steenberg</a> (London AI Safety Research Labs)
+  <a href="https://orcid.org/0009-0003-4172-8997" target="_blank">Ruifeng Fu</a> (School of Computer Software, Tianjin University),<br>
+  <a href="https://orcid.org/0000-0003-2998-1052" target="_blank">Yingquan Zhao</a> (School of Cybersecurity, Tianjin University),<br>
+  <a href="https://orcid.org/0000-0001-7780-630X" target="_blank">Meng Wang</a> (Department of Computer Science, University of Bristol),<br>
+  <a href="https://orcid.org/0000-0001-6173-8170" target="_blank">Zan Wang</a> (School of Artificial Intelligence, Tianjin University),<br>
+  <a href="https://orcid.org/0000-0003-3056-9962" target="_blank">Junjie Chen</a> (School of Computer Software, Tianjin University)
 </p>
 
 <p>
@@ -144,16 +146,22 @@
 
 <div class="abstract-content" style="display: none;">
   <p style="text-align: justify;">
-    Software organisations building with generative AI face a problem that they did not create and cannot solve alone: the
-    downstream burden of AI safety debt. AI safety debt — the gap between the safety approaches frontier labs use and those 
-    needed to justify the safety claims, implicit or explicit, expected from end users — produces consequences that fall on
-    the downstream developer and the developer’s own users. Unlike traditional technical debt, this burden emanates from
-    outside the organisation’s codebase, is partially beyond its control, and is growing as AI capabilities advance. First,
-    we characterise three properties that make AI safety debt burdens harder to manage than familiar software risks:
-    capabilities and contexts shift unpredictably, responsibilities and harms diffuse vertically, and adversaries and AI
-    systems may actively exploit gaps. Second, we propose the AI safety debt burden register as a practical tracking tool and
-    starting point for preparation.
+    Software testing critically depends on test oracles, yet existing test oracles are often incomplete and insufficient for detecting bugs where implementations deviate from their specifications. Meanwhile, despite advances in test oracle
+    construction, existing techniques typically rely on coarse-grained failure signals or require substantial manual effort, and thus remain inadequate for detecting specification-violation bugs. To address these limitations, we propose
+    JavaOracle, a specification-driven approach that leverages large language models (LLMs) to reason over specifications and systematically enhance test oracles. Specifically, JavaOracle consists of three stages. First, it leverages LLMs
+    to analyze specifications and derive additional test oracles that are not covered by existing tests, while integrating a root-cause–guided repair workflow to ensure that the enhanced test cases are syntactically and semantically valid.
+    Second, it designs a multi-agent debate workflow to distinguish previously unknown specification-violation bugs from assertion failures caused by LLM hallucinations, thereby mitigating the impact of hallucinations. Third, unlike existing
+    approaches that stop at bug detection, JavaOracle further automates test case minimization and bug report generation, producing submission-ready reports without manual effort.
   </p>
+
+  <p style="text-align: justify;">
+    We evaluate JavaOracle on 3,961 test cases for Java SE API from the OpenJDK. Experimental results on the latest OpenJDK standard library show that JavaOracle substantially outperforms state-of-the-art baselines, including Fuzz4All,
+    ChatAssert, and Randoop. Cumulatively, JavaOracle discovers 45 previously unknown bugs, which have already been confirmed/fixed by developers, with many persisting since their initial implementation. In an entire pipeline running,
+    JavaOracle reduces execution failures to an average of 6 reports per run, achieving 88.9% precision. In contrast, baseline approaches required exhaustive manual inspection to identify only 0, 3, and 2 real bugs, respectively. Further
+    analysis shows that test cases enhanced by JavaOracle achieve high validity, with an execution pass rate of 79.1%, compared to 35.4%, 92.2% (55.5% test cases unchanged), and 77.6% for the baselines. Ablation studies further demonstrate
+    the effectiveness of JavaOracle components, while the automated pipeline significantly reduces manual analysis effort.
+  </p>
+
 </div>
 
   </div>
