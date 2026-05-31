@@ -178,6 +178,49 @@ body {
   min-width: 250px;
 }
 
+/* Workshop Schedule */
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+  background: white;
+}
+
+.schedule-table th {
+  background-color: var(--blue-main);
+  color: white;
+  text-align: left;
+  padding: 14px;
+}
+
+.schedule-table td {
+  padding: 14px;
+  border-bottom: 1px solid #e5e7eb;
+  vertical-align: top;
+}
+
+.schedule-table tr:hover {
+  background-color: #f8fbff;
+}
+
+.session-row {
+  background-color: #eef5fc;
+  font-weight: 600;
+}
+
+.break-row {
+  background-color: #fafafa;
+}
+
+.schedule-table td:first-child {
+  width: 170px;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+/* Mobile responsiveness */
+
 @media (max-width: 768px) {
   .journal-content {
     flex-direction: column;   /* stack image + text vertically */
@@ -187,6 +230,20 @@ body {
   .journal-image img {
     width: 180px;            /* smaller size on mobile */
   }
+
+  .schedule-table {
+    font-size: 0.9em;
+  }
+
+  .schedule-table th,
+  .schedule-table td {
+    padding: 10px;
+  }
+
+  .schedule-table td:first-child {
+    width: 110px;
+  }
+
 }
 
 /* Typography */
